@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+var socket = new WebSocket("ws://{my_ip}:2112")
+
+var setlight = function(light, state) {
+    // light is a value from 0 to 3
+    // state is 0 for off and 1 for on
+    // this sends the values to the CHIP
+    socket.send(String(light) + String(state))
+}
+</script>
+</head>
+<body>
+</body>
+</html>
+    
