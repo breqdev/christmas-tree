@@ -15,6 +15,6 @@ class Relay:
 relays = [Relay(p) for p in relaypins]
 
 while True:
-    status = requests.get("http://mc.2112electronics.com/").json
+    status = requests.get("http://mc.2112electronics.com/").json()
     for i, s in enumerate(status):
         relays[i].flip(s)

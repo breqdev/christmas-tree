@@ -24,7 +24,7 @@ while True:
     for i in range(4):
         if transitioning & 2**i:
             relays[i].flip(config & 2**i)
-            time.sleep(0.2)
+            time.sleep(0.1)
     n = old_config = config
     c = 0
     while n:
